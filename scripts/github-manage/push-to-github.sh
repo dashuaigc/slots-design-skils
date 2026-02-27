@@ -70,24 +70,27 @@ COMMIT_MSG="${1:-"sync: $TIMESTAMP"}"
 echo "→ 暂存变更..."
 git add .
 
-# ── 检查是否有可提交内容 ──────────────────────────────────────────────────────
-if git diff --cached --quiet; then
+# ── 检查是否有新的可提交内容 ─────────────────────────────────────────────────
+HAS_STAGED=$(git diff --cached --quiet && echo "no" || echo "yes")
+UNPUSHED=$(git log origin/"$GITHUB_BRANCH"..HEAD --oneline 2>/dev/null | wc -l | tr -d ' ')
+
+if [ "$HAS_STAGED" = "no" ] && [ "$UNPUSHED" = "0" ]; then
   echo ""
   echo "✅ 没有新变更，本地已与远端同步，无需推送。"
   exit 0
 fi
 
-# ── 显示变更摘要 ──────────────────────────────────────────────────────────────
-echo ""
-echo "── 本次变更文件 ──────────────────────────────────"
-git diff --cached --name-status
-echo "──────────────────────────────────────────────────"
-echo ""
-
-# ── 提交 ─────────────────────────────────────────────────────────────────────
-git commit -m "$COMMIT_MSG"
-echo "→ 已提交：「$COMMIT_MSG」"
-echo ""
+# ── 有新文件变更则提交 ────────────────────────────────────────────────────────
+if [ "$HAS_STAGED" = "yes" ]; then
+  echo ""
+  echo "── 本次变更文件 ──────────────────────────────────"
+  git diff --cached --name-status
+  echo "──────────────────────────────────────────────────"
+  echo ""
+  git commit -m "$COMMIT_MSG"
+  echo "→ 已提交：「$COMMIT_MSG」"
+  echo ""
+fi
 
 # ── 推送（若远端有更新则先 rebase 再推）────────────────────────────────────────
 echo "→ 推送到 GitHub..."
