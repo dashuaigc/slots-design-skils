@@ -285,7 +285,6 @@ options:
 
 - **完整问卷定义**：[questionnaire.md](questionnaire.md)
 - **WILD 美术规范**：[wild-art-spec.md](wild-art-spec.md)
-- **机制深度参考**：[wild-mechanics-reference.md](wild-mechanics-reference.md)
 - **人工评审清单**：[design-checklist.md](design-checklist.md)
 - **参考资料与案例库**：[e:/SKILLS/Slots/.claude/skills/slots-wild-design/references/](e:/SKILLS/Slots/.claude/skills/slots-wild-design/references/)
 - **生成结果存档**：[e:/SKILLS/Slots/.claude/skills/slots-wild-design/outputs/prompts/](e:/SKILLS/Slots/.claude/skills/slots-wild-design/outputs/prompts/)
