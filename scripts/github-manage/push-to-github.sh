@@ -84,12 +84,18 @@ git diff --cached --name-status
 echo "──────────────────────────────────────────────────"
 echo ""
 
-# ── 提交并推送 ────────────────────────────────────────────────────────────────
+# ── 提交 ─────────────────────────────────────────────────────────────────────
 git commit -m "$COMMIT_MSG"
 echo "→ 已提交：「$COMMIT_MSG」"
 echo ""
+
+# ── 推送（若远端有更新则先 rebase 再推）────────────────────────────────────────
 echo "→ 推送到 GitHub..."
-git push -u origin "$GITHUB_BRANCH"
+if ! git push -u origin "$GITHUB_BRANCH" 2>/dev/null; then
+  echo "→ 检测到远端有更新，正在同步..."
+  git pull --rebase origin "$GITHUB_BRANCH"
+  git push -u origin "$GITHUB_BRANCH"
+fi
 
 echo ""
 echo "=================================================="
