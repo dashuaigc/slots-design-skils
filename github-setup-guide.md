@@ -23,7 +23,7 @@
 3. 点击 **Personal access tokens** → **Tokens (classic)**
 4. 点击 **Generate new token** → **Generate new token (classic)**
 5. 填写名称（例如：`slots-backup`），设置过期时间（建议 1 年）
-6. 勾选权限：**repo**（完整仓库权限）
+6. 勾选权限：**Public repositories**（完整仓库权限）
 7. 点击 **Generate token**，**立即复制并保存**令牌（只显示一次！）
 
 ---

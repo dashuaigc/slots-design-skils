@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # =============================================================================
-# push-to-github.sh — E:/SKILLS/Slots → GitHub 同步执行脚本
-# 用法：bash .claude/skills/slots-wild-design/scripts/push-to-github.sh ["提交说明"]
+# push-to-github.sh — Skills → GitHub 同步执行脚本
+# 用法：bash .claude/skills/push-to-github.sh ["提交说明"]
 # 注意：必须先由 Claude Code 完成 github-config.sh 配置才能运行
 # =============================================================================
 
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+REPO_ROOT="$SCRIPT_DIR"
 CONFIG_FILE="$SCRIPT_DIR/github-config.sh"
 
 # ── 读取配置 ──────────────────────────────────────────────────────────────────
@@ -35,7 +35,7 @@ fi
 cd "$REPO_ROOT"
 
 echo "=================================================="
-echo "  Slots → GitHub 同步"
+echo "  Skills → GitHub 同步"
 echo "  本地目录：$REPO_ROOT"
 echo "  目标仓库：$GITHUB_REPO_URL"
 echo "  分支：$GITHUB_BRANCH"
