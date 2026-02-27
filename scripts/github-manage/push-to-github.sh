@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # =============================================================================
 # push-to-github.sh — Skills → GitHub 同步执行脚本
-# 用法：bash .claude/skills/push-to-github.sh ["提交说明"]
+# 用法：bash .claude/skills/scripts/github-manage/push-to-github.sh ["提交说明"]
 # 注意：必须先由 Claude Code 完成 github-config.sh 配置才能运行
 # =============================================================================
 
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-REPO_ROOT="$SCRIPT_DIR"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 CONFIG_FILE="$SCRIPT_DIR/github-config.sh"
 
 # ── 读取配置 ──────────────────────────────────────────────────────────────────
