@@ -10,6 +10,12 @@
 references/
 ├── wild-icons/          ← 优秀 WILD 图标截图/样例（直接截图放入即可）
 ├── competitor-games/    ← 竞品游戏截图与分析（按游戏名命名子文件夹）
+├── ai-models/          ← AI生图平台模型能力与Prompt规范文档
+│   ├── midjourney-models.md
+│   ├── jimeng-models.md
+│   ├── gemini-models.md
+│   ├── stable-diffusion-models.md
+│   └── ...
 ├── style-guides/        ← 风格指南、美术规范 PDF / 参考图
 └── prompt-examples/     ← 实测效果好的 Prompt 记录（按平台分类）
 ```
