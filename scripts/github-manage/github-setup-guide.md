@@ -33,7 +33,7 @@
 ### 修改 github-config.sh
 用文本编辑器打开：
 ```
-e:\SKILLS\Slots\.claude\skills\slots-wild-design\scripts\github-config.sh
+e:\SKILLS\Slots\.claude\skills\scripts\github-manage\github-config.sh
 ```
 
 将文件内容改为：
@@ -48,7 +48,7 @@ GITHUB_BRANCH="main"
 ### 首次推送
 在 Git Bash 中运行：
 ```bash
-bash "e:/SKILLS/Slots/.claude/skills/slots-wild-design/scripts/push-to-github.sh" "首次备份"
+bash "e:/SKILLS/Slots/.claude/skills/scripts/github-manage/push-to-github.sh" "首次备份"
 ```
 
 Windows 会弹出凭据窗口：
@@ -60,6 +60,42 @@ Windows 会弹出凭据窗口：
 > "我已经手动配置好了 GitHub，以后每次更新 Skills 后请询问我要不要提交"
 
 Claude Code 会读取配置文件并自动识别已配置状态。
+
+---
+
+## 版本管理
+
+### 查看版本历史
+
+查看 Skills 仓库的提交历史（版本记录、时间、内容）：
+
+```bash
+# 查看最近 10 条提交（默认）
+bash "e:/SKILLS/Slots/.claude/skills/scripts/github-manage/github-history.sh"
+
+# 查看最近 20 条
+bash "e:/SKILLS/Slots/.claude/skills/scripts/github-manage/github-history.sh" 20
+
+# 查看某条提交的详细文件变更
+bash "e:/SKILLS/Slots/.claude/skills/scripts/github-manage/github-history.sh" --detail abc1234
+```
+
+### 回退到历史版本
+
+将 Skills 文件恢复到某个历史版本的状态（非破坏性，会创建新提交记录回退操作）：
+
+```bash
+# 先预览回退将产生的变更（不执行修改）
+bash "e:/SKILLS/Slots/.claude/skills/scripts/github-manage/github-rollback.sh" abc1234 --dry-run
+
+# 确认后执行回退
+bash "e:/SKILLS/Slots/.claude/skills/scripts/github-manage/github-rollback.sh" abc1234
+```
+
+**安全说明：**
+- 回退会创建一个新的提交，完整历史始终保留，可随时再次回退
+- `github-config.sh` 中的凭据信息不会被回退覆盖
+- 建议先使用 `--dry-run` 预览变更后再执行
 
 ---
 
