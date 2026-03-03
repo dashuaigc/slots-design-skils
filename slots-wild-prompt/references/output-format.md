@@ -7,7 +7,7 @@
 ## 存档路径
 
 ```
-e:/SKILLS/Slots/.claude/outputs/prompts/
+../../outputs/prompts/
 ```
 
 自检循环完成后**自动存档**，无需用户确认。

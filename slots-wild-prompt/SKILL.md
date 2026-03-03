@@ -22,7 +22,7 @@ description: 生成老虎机游戏WILD图标的专业AI生图Prompt。用于在M
 7. 输出完整需求汇总表，弹窗确认无误后锁定方案。
 8. 读取 `references/prompt-spec.md`，为每个平台/模型生成差异化 Prompt。
 9. 读取 `references/self-check-spec.md`，立即自检循环（最多 3 轮），直到全部通过。
-10. 读取 `references/output-format.md`，**每个平台单独一个文件**归档至 `e:/SKILLS/Slots/.claude/outputs/prompts/`。
+10. 读取 `references/output-format.md`，**每个平台单独一个文件**归档至 `../../outputs/prompts/`。
 
 ## 弹窗问询硬性要求
 
@@ -57,7 +57,7 @@ description: 生成老虎机游戏WILD图标的专业AI生图Prompt。用于在M
 | **即梦** | 仅中文 Prompt | `.md` |
 | **其他平台** | 按平台偏好语言 | `.md` |
 
-- 归档路径：`e:/SKILLS/Slots/.claude/outputs/prompts/`
+- 归档路径：`../../outputs/prompts/`
 - 详细模板与命名规则见 `references/output-format.md`。
 
 ## 参考文件装载策略
