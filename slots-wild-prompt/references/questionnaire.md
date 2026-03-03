@@ -16,12 +16,12 @@
 - 第一阶段完成后，立即执行并行 WebSearch
 - 搜索竞品 WILD 图标 + AI 平台模型能力
 - 生成智能分析，不弹窗
-- 读取 `references/ai-models/` 目录下对应平台规范文件
+- 读取 `ai-models/` 目录下对应平台规范文件（同目录）
 
 **第三阶段：美术细节问询（智能选项生成）**
 - 基于第二阶段的分析，为每题生成"智能选项"供选择
 - 共 5 批弹窗，每批 1-4 题
-- 选项内容来自：竞品分析 + AI 模型能力 + wild-art-spec.md 规范
+- 选项内容来自：竞品分析 + AI 模型能力 + `wild-art-spec.md`（同目录）规范
 
 **第四阶段：汇总确认**
 - 输出完整答案汇总表格
@@ -194,7 +194,7 @@ options:
 
 **Step 2.2｜AI 模型规范文档读取**
 
-读取 `e:/SKILLS/Slots/.claude/skills/slots-wild-design/references/ai-models/` 目录下的模型规范文件：
+读取 `ai-models/` 目录下的模型规范文件（同目录）：
 
 - `midjourney-models.md`
 - `jimeng-models.md`
@@ -226,7 +226,7 @@ options:
 - 根据 Q1（游戏主题）+ 竞品 WILD 文字处理方式分析，生成 Q19 和 Q20 的智能选项
 
 【边框与背景智能推荐】
-- 根据竞品分析 + wild-art-spec.md 规范，生成 Q21、Q22、Q23 的智能选项
+- 根据竞品分析 + `wild-art-spec.md`（同目录）规范，生成 Q21、Q22、Q23 的智能选项
 
 **输出格式：** 在 Step 3 问询时，选项中注明"推荐"并说明理由（基于竞品分析+AI模型能力）
 

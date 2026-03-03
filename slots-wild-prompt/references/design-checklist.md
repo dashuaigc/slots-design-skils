@@ -1,6 +1,6 @@
 # WILD 图标美术阶段检查清单
 
-> 本清单用于**人工评审阶段**，配合 [wild-art-spec.md](wild-art-spec.md) 使用。
+> 本清单用于**人工评审阶段**，配合 [wild-art-spec.md](wild-art-spec.md)（同目录） 使用。
 > AI 自检报告（由 SKILL.md 自动生成）覆盖 Prompt 阶段；本清单用于拿到生图结果后的人工复核。
 
 ---
@@ -34,7 +34,7 @@
 
 ## 阶段二：生图后（图像评审）
 
-> 对照 [wild-art-spec.md](wild-art-spec.md) 中的评分表进行评审。以下为快速核查项。
+> 对照 [wild-art-spec.md](wild-art-spec.md)（同目录） 中的评分表进行评审。以下为快速核查项。
 
 ### 视觉层级 ｜ 规范第一章
 - [ ] WILD 是卷轴中视觉重量最高的图标（或符合其定位层级）

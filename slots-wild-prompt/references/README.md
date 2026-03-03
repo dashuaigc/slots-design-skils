@@ -1,6 +1,6 @@
 # 参考资料库 / References
 
-此文件夹用于存放老虎机图标设计的参考资料和案例素材，供 `slots-wild-design` 技能生成 Prompt 时参考。
+此文件夹用于存放老虎机图标设计的参考资料和案例素材，供 `slots-wild-prompt` 技能生成 Prompt 时参考。
 
 ---
 
