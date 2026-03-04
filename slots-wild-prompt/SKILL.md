@@ -20,6 +20,7 @@ description: 生成老虎机游戏WILD图标的专业AI生图Prompt。用于在M
 5. 基于搜索结果 + 模型能力，为第三阶段每题生成智能推荐选项。
 6. 读取 `references/questionnaire.md` 第三阶段问题集，按协议执行弹窗（Batch 3.1→3.7）。
 7. 输出完整需求汇总表，弹窗确认无误后锁定方案。
+7.5. 将汇总结果写入 `../../outputs/[主题]_[风格]_[YYYYMMDD]_[NNN]_brief.md`，与 `prompts/` 同层级，规范见 `references/output-format.md`。
 8. 读取 `references/prompt-spec.md`，为每个平台/模型生成差异化 Prompt。
 9. 读取 `references/self-check-spec.md`，立即自检循环（最多 3 轮），直到全部通过。
 10. 读取 `references/output-format.md`，**每个平台单独一个文件**归档至 `../../outputs/prompts/`。
@@ -53,7 +54,7 @@ description: 生成老虎机游戏WILD图标的专业AI生图Prompt。用于在M
 | 平台 | 输出内容 | 文件格式 |
 |------|---------|---------|
 | **Midjourney** | 仅英文 Prompt | `.md` |
-| **Nano Banana 2** | 中英文双语 Prompt | `.json` |
+| **Nano Banana** | 中英文双语 Prompt | `.json` |
 | **即梦** | 仅中文 Prompt | `.md` |
 | **其他平台** | 按平台偏好语言 | `.md` |
 

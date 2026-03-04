@@ -163,7 +163,7 @@ multiSelect: true
 options:
   - Midjourney
   - 即梦（Jimeng / 字节跳动）
-  - Nano Banana 2（Gemini 图像生成）
+  - Nano Banana（Gemini 图像生成）
   - 其他（Stable Diffusion / Flux / DALL-E / Firefly / Leonardo 等，请在"其他"填写）
 
 ---
@@ -408,15 +408,20 @@ options:
 
 ### Batch 3.7｜模型最终选择
 
-**说明：** 每选中平台一道题，合并为一次 AskUserQuestion 调用。选项从 Step 2.3 的 AI 模型分析中生成。
+**说明：** 所有选中平台合并为一道多选题。选项格式为"[平台]: [模型名（版本号）]— 说明"，选项由 Step 2.3 的 AI 模型分析动态生成。每个平台选一项，最终选中数量应等于已选平台数。
 
-header: [平台名]模型
-multiSelect: false
+**Q3.7 为每个平台选择使用的模型**
+header: 各平台模型
+multiSelect: true
 options:
-  - 模型 A（版本号）— ⭐ 推荐，结合本次设计的优势说明
-  - 模型 B（版本号）— 适合场景
-  - 模型 C（版本号）— 适合场景
-  - 始终用最新版（实时用最新可用版本）
+  - Midjourney: [推荐模型名（版本号）]— ⭐ 推荐理由
+  - 即梦: [推荐模型名（版本号）]— ⭐ 推荐理由
+  - Nano Banana: [推荐模型名（版本号）]— ⭐ 推荐理由
+  - 全部使用最新版（实时自动选最新可用版本）
+
+**注意：**
+- 仅展示 Q13 中已选平台的选项，最多 3 个平台选项 + 1 个兜底选项 = 共 4 项
+- 每平台仅展示 Step 2.3 分析中最推荐的一个模型；如需其他版本，请用户在"其他"中说明
 
 ---
 

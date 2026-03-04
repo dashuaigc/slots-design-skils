@@ -13,7 +13,7 @@
 示例：
 - `midjourney-models.md` — Midjourney 模型规范
 - `jimeng-models.md` — 即梦模型规范
-- `gemini-models.md` — Nano Banana 2 (Gemini) 模型规范
+- `gemini-models.md` — Nano Banana (Gemini) 模型规范
 - `stable-diffusion-models.md` — Stable Diffusion 模型规范
 - `flux-models.md` — Flux 模型规范
 
@@ -67,7 +67,7 @@
 |-------|------|------|
 | `midjourney-models.md` | Midjourney | ✅ 完成 |
 | `jimeng-models.md` | 即梦 | ✅ 完成 |
-| `gemini-models.md` | Nano Banana 2 (Gemini) | ✅ 完成 |
+| `gemini-models.md` | Nano Banana (Gemini) | ✅ 完成 |
 
 ---
 

@@ -57,7 +57,7 @@ WebSearch: "[平台名] AI生图 模型能力 美术风格 参数 [当前年份]
 |------|------|
 | `midjourney-models.md` | Midjourney |
 | `jimeng-models.md` | 即梦 |
-| `gemini-models.md` | Nano Banana 2 |
+| `gemini-models.md` | Nano Banana |
 | `stable-diffusion-models.md` | Stable Diffusion（如存在） |
 | `[其他平台]-models.md` | 其他平台 |
 

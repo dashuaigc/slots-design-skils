@@ -36,13 +36,13 @@
 
 ---
 
-### Nano Banana 2 — 中英文 JSON `.json`
+### Nano Banana — 中英文 JSON `.json`
 
 文件内容为 JSON 格式，包含英文和中文两个版本。
 
 ```json
 {
-  "platform": "Nano Banana 2",
+  "platform": "Nano Banana",
   "model": "[模型版本]",
   "prompt_en": "[英文 Prompt 内容]",
   "prompt_cn": "[中文 Prompt 内容]"
@@ -84,7 +84,7 @@
 | 平台 | 缩写 |
 |------|------|
 | Midjourney | `midjourney` |
-| Nano Banana 2 | `nb2` |
+| Nano Banana | `nb2` |
 | 即梦 | `jimeng` |
 | Stable Diffusion | `sd` |
 | Flux | `flux` |
@@ -130,6 +130,70 @@
 midjourney_caishen_toon3d_20260303_001.md
 nb2_caishen_toon3d_20260303_001.json
 jimeng_caishen_toon3d_20260303_001.md
+```
+
+---
+
+## 会话汇总文档归档
+
+### 触发时机
+
+第四阶段用户确认"无需修改"后，**在生成 Prompt 之前**立即执行。
+
+### 目录结构
+
+```
+outputs/
+├── prompts/                                   # 各平台 Prompt 文件（现有）
+└── [主题]_[风格]_[YYYYMMDD]_[NNN]_brief.md   # 汇总结果文档（与 prompts/ 同层）
+```
+
+文件命名规则与 Prompt 文件前缀保持一致，末尾加 `_brief` 后缀以区分：`[主题关键词]_[风格代码]_[YYYYMMDD]_[NNN]_brief.md`（同一批次序号相同）。
+
+### design-brief.md 内容结构
+
+```markdown
+# WILD 图标设计简报 — [主题] · [日期]
+
+## 游戏基础
+- 主题：[Q1答案]
+- 目标玩家：[Q2]  目标市场：[Q3]
+- 卷轴布局：[Q4]
+
+## WILD 规格
+- 符号格比例：[Q5]  画布比例：[Q6]
+- 画布背景色：[Q7]  符号层级：[Q8]
+
+## 主体设定
+- 主体类别：[Q9]  构图形态：[Q10]
+- 灵感来源：[Q11]
+
+## 美术方向
+- 视觉复杂度：[Q12]
+- 氛围基调：[Q14]  绘画风格：[Q15]
+- 主材质：[Q16]  光照风格：[Q17]
+- 特定元素：[Q18]
+
+## 色彩与情绪
+- 主色调：[Q19]  情绪基调：[Q20]
+
+## WILD 文字
+- 字体风格：[Q21]  文字位置：[Q22]
+- 衬线风格：[Q23]  关联装饰：[Q24]
+
+## 边框与背景
+- 边框设计：[Q25]  边框形状：[Q26]
+- 框内背景：[Q27]  视觉复杂度确认：[Q28]
+
+## 参照与限制
+- 竞品参照：[Q29]
+- 内容限制：[Q30]
+
+## 选定平台与模型
+[每行一个平台及其选定模型]
+
+## 竞品分析摘要（联网搜索结果）
+[Step 2.3 分析的 3-5 条关键结论]
 ```
 
 ---
