@@ -49,7 +49,7 @@ options:
 1. 读取 `references/api-spec.md` 获取端点和请求格式。
 2. 使用 Python 构建 JSON payload（避免 shell 转义问题）：
    - 从 JSON 文件读取 Prompt 时，用 Python 读取文件并构建 payload
-   - 写入 `$TEMP/nb2_payload.json` 临时文件
+   - 写入 `../../outputs/nb2_payload.json` 临时文件（Step 6 完成后自动删除）
 3. 使用 `curl` 调用生成 API：
 
 ```bash
@@ -98,6 +98,7 @@ curl -s -X GET "https://api.apimart.ai/v1/tasks/<TASK_ID>?language=zh" \
    - 多张图片追加字母后缀：`_001a.png`, `_001b.png`
 5. 输出结果摘要（下载路径、耗时、分辨率）。
 6. 使用 Read 工具展示生成的图片。
+7. 自动删除临时 payload 文件（`../../outputs/nb2_payload.json`）。
 
 ---
 

@@ -20,10 +20,11 @@ description: 生成老虎机游戏WILD图标的专业AI生图Prompt。用于在M
 5. 基于搜索结果 + 模型能力，为第三阶段每题生成智能推荐选项。
 6. 读取 `references/questionnaire.md` 第三阶段问题集，按协议执行弹窗（Batch 3.1→3.7）。
 7. 输出完整需求汇总表，弹窗确认无误后锁定方案。
-7.5. 将汇总结果写入 `../../outputs/[主题]_[风格]_[YYYYMMDD]_[NNN]_brief.md`，与 `prompts/` 同层级，规范见 `references/output-format.md`。
+7.5. 将汇总结果写入 `../../outputs/briefs/[主题]_[风格]_[YYYYMMDD]_[NNN]_brief.md`，规范见 `references/output-format.md`。
 8. 读取 `references/prompt-spec.md`，为每个平台/模型生成差异化 Prompt。
 9. 读取 `references/self-check-spec.md`，立即自检循环（最多 3 轮），直到全部通过。
 10. 读取 `references/output-format.md`，**每个平台单独一个文件**归档至 `../../outputs/prompts/`。
+11. **修订模式**（Prompt 输出后，若用户反馈效果不理想需要修改时触发）：读取 `references/output-format.md` 修订流程章节，自动定位本次会话简报文件，跳回步骤 7 汇总确认弹窗，修改确认后从步骤 8 重新生成（新文件序号自动递增）。
 
 ## 弹窗问询硬性要求
 
@@ -70,3 +71,4 @@ description: 生成老虎机游戏WILD图标的专业AI生图Prompt。用于在M
 - 生成 Prompt 前读取 `references/prompt-spec.md` 和 `references/wild-art-spec.md`。
 - 自检时读取 `references/self-check-spec.md`。
 - 输出文档前读取 `references/output-format.md`。
+- 修订模式时读取 `references/output-format.md` 修订流程章节。
