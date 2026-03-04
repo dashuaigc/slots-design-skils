@@ -1,1 +1,4 @@
 # github-config.sh 通过 push 脚本脱敏后上传，git skip-worktree 保护本地真实值
+
+# API 配置文件（含敏感 API Key）
+nano-banana-generation/references/api-config.md
