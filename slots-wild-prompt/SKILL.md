@@ -55,7 +55,7 @@ description: 生成老虎机游戏WILD图标的专业AI生图Prompt。用于在M
 | 平台 | 输出内容 | 文件格式 |
 |------|---------|---------|
 | **Midjourney** | 仅英文 Prompt | `.md` |
-| **Nano Banana** | 中英文双语 Prompt | `.json` |
+| **Nano Banana** | 结构化 JSON 片段（按维度拆分字段） | `.md` |
 | **即梦** | 仅中文 Prompt | `.md` |
 | **其他平台** | 按平台偏好语言 | `.md` |
 
