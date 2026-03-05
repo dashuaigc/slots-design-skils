@@ -146,6 +146,35 @@ WILD 图标必须与以下符号保持清晰的视觉区分：
 - ❌ 图标主体纯灰色（无色彩感，难以识别）
 - ❌ 主体颜色与外发光颜色使用互补色（如红色主体 + 绿色发光，圣诞节主题除外）
 
+### 3.4 主体高光与反光规范
+
+**WILD 图标主体（尤其是人物角色的皮肤与服装）应以低反光、哑光质感为优先，避免高光/反光抢夺视觉焦点或产生廉价塑料感。**
+
+```
+皮肤质感规范：
+  ✅ 次表面散射（SSS）—— 模拟皮肤温润透亮的内发光效果
+  ✅ 哑光低光泽度（Matte skin，specularity < 20%）
+  ✅ 细腻皮肤纹理，近零镜面反射
+  ❌ 油光高亮皮肤（Oily skin / high-gloss skin）
+  ❌ 镜面反射质感（Mirror-like specularity on skin）
+  ❌ 塑料感高光（Plastic-like specular highlights）
+
+服装/布料材质规范：
+  ✅ 哑光织物、丝绒、磨砂质感 —— 主要为漫反射
+  ✅ 薄纱/半透明材质 —— 呈现微弱漫射透光，而非强高光点
+  ❌ 布料高光区域过亮、过锐
+  ❌ 布料产生接近金属的镜面反射效果
+
+允许高光/反光的例外场景：
+  · 金属盔甲、武器刀刃 → 允许锐利金属高光
+  · 宝石/水晶镶嵌物 → 允许折射与焦散点光
+  · 金色配饰、边框、WILD 文字 → 允许暖金属高光
+```
+
+**Prompt 描述策略：**
+- 英：`matte skin texture, near-zero specularity, very low glossiness, subsurface scattering on skin, no oily skin, no plastic highlights`
+- 中：`哑光皮肤，极低光泽度，近零高光反射，皮肤次表面散射，无油光，无塑料感高光`
+
 ---
 
 ## 第四章：发光规范（Glow & Bloom）

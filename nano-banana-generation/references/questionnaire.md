@@ -11,7 +11,7 @@
 
 ## Batch 1 — Prompt 来源
 
-先扫描 `../../outputs/prompts/` 目录下所有 `nb2_*.json` 文件。
+先扫描 `../../outputs/prompts/` 目录下所有 `nb2_*.md` 文件。
 
 ### 若找到文件
 
