@@ -1,6 +1,6 @@
 ---
 name: slots-wild-prompt
-description: 生成老虎机游戏WILD图标的专业AI生图Prompt。用于在Midjourney、Nano banana、即梦等平台产出可直接使用的Prompt，通过分阶段弹窗问卷收集信息，联网搜索竞品与AI模型规范，智能生成美术选项，生成多平台差异化Prompt。
+description: 生成老虎机游戏WILD图标的专业AI生图Prompt。用于在Midjourney、Nano banana、即梦等AI生图平台产出可直接使用的Prompt去设计生成WILD图标。
 ---
 
 # Slots WILD Prompt 专家
