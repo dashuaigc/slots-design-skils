@@ -24,7 +24,7 @@
   skills/
     slots-wild-prompt/
     nano-banana-generation/
-    README.md
+    ...
   outputs/
     briefs/
     prompts/
@@ -37,7 +37,7 @@
 
 ### 1. 放置 skill 目录
 
-将仓库 clone 到你的 .cluade 目录：
+将仓库 clone 到你的 .cluade/ 目录：
 
 ```bash
 git clone https://github.com/dashuaigc/slots-design-skils.git
