@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash \"e:/SKILLS/Slots/.claude/scripts/github-manage/push-to-github.sh\" \"更新 slots-scatter-prompt SKILL.md\")"
+    ]
+  }
+}
